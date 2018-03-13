@@ -1,20 +1,16 @@
 package ua.spring.bookingroom.service.impl;
 
-import com.sun.javafx.collections.ImmutableObservableList;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 import ua.spring.bookingroom.domain.Reserve;
 import ua.spring.bookingroom.repository.ReserveRepository;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 

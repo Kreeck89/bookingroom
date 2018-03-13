@@ -53,9 +53,9 @@ public class RestAnswerController {
 
     /**
      * @param from request String param starts date for found free rooms.
-     * @param to request String param ends date for found free rooms.
-     * And converts this Strings to Local Data
-     * And search free rooms in this dates and save to set "freeRooms".
+     * @param to   request String param ends date for found free rooms.
+     *             And converts this Strings to Local Data
+     *             And search free rooms in this dates and save to set "freeRooms".
      * @return Set<Room> what don`t have any reserves or reserves on this days.
      */
     @RequestMapping("/allFreeRooms")
@@ -89,7 +89,7 @@ public class RestAnswerController {
 
     /**
      * @param modelMap for some change what we can add in future(don`t use now, for example).
-     * @param surname request param for search and check user.
+     * @param surname  request param for search and check user.
      * @param password request param for search and check user.
      * @return Integer value with summary price for booked room by this user.
      */
@@ -113,10 +113,9 @@ public class RestAnswerController {
     }
 
     /**
-     * @param surname request param for search and check user.
+     * @param surname  request param for search and check user.
      * @param password request param for search and check user.
-     * If don`t found registered user will be exception.
-     *
+     *                 If don`t found registered user will be exception.
      * @return HashMap with reserves by key=LocalData, value=Room.
      */
     @RequestMapping(value = "reserves", method = RequestMethod.POST)
@@ -135,7 +134,7 @@ public class RestAnswerController {
     /**
      * @param filter request param for filter searching rooms.
      * @return HashMap with key=String and value=List<Room>...
-     *
+     * <p>
      * In future here may be other filters and be changed this Map!
      */
     @RequestMapping("/withFilter")

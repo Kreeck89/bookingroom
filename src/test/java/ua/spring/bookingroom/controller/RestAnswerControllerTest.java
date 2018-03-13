@@ -45,7 +45,8 @@ public class RestAnswerControllerTest {
     public void getAllReserves() {
 
         ResponseEntity<Map<String, List<Room>>> exchange = template.exchange("http://localhost:8080/rest/allReserves", HttpMethod.GET,
-                null, new ParameterizedTypeReference<Map<String, List<Room>>>() {});
+                null, new ParameterizedTypeReference<Map<String, List<Room>>>() {
+                });
         assertThat(exchange, is(nullValue()));
 //        Map<String, List<Room>> body = exchange.getBody();
 
@@ -54,28 +55,32 @@ public class RestAnswerControllerTest {
     @Test
     public void getFreeRooms() {
         ResponseEntity<Set<Room>> exchange = template.exchange("http://localhost:8080/rest/allFreeRooms", HttpMethod.POST,
-                null, new ParameterizedTypeReference<Set<Room>>() {});
+                null, new ParameterizedTypeReference<Set<Room>>() {
+                });
         assertThat(exchange, is(nullValue()));
     }
 
     @Test
     public void summaryPrice() {
         ResponseEntity<Integer> exchange = template.exchange("http://localhost:8080/rest/summary", HttpMethod.POST,
-                null, new ParameterizedTypeReference<Integer>() {});
+                null, new ParameterizedTypeReference<Integer>() {
+                });
         assertThat(exchange, is(nullValue()));
     }
 
     @Test
     public void userReserves() {
         ResponseEntity<Map<LocalDate, Room>> exchange = template.exchange("http://localhost:8080/rest/reserves", HttpMethod.POST,
-                null, new ParameterizedTypeReference<Map<LocalDate, Room>>() {});
+                null, new ParameterizedTypeReference<Map<LocalDate, Room>>() {
+                });
         assertThat(exchange, is(nullValue()));
     }
 
     @Test
     public void withFilter() {
         ResponseEntity<Map<String, List<?>>> exchange = template.exchange("http://localhost:8080/rest/withFilter", HttpMethod.POST,
-                null, new ParameterizedTypeReference<Map<String, List<? extends Object>>>() {});
+                null, new ParameterizedTypeReference<Map<String, List<? extends Object>>>() {
+                });
         assertThat(exchange, is(nullValue()));
     }
 }

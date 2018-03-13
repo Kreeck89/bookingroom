@@ -34,9 +34,10 @@ public class RegistrationController {
 
     /**
      * This method request some params for save new user into database.
+     *
      * @param modelMap for some changes in future if will need.
-     * @param name request param for save user`s name.
-     * @param surname request param for save user`s surname.
+     * @param name     request param for save user`s name.
+     * @param surname  request param for save user`s surname.
      * @param password request param for save user`s password.
      * @return String with mapping to the next page *.jsp.
      */
@@ -58,11 +59,12 @@ public class RegistrationController {
      * 4. Receives List<Reserve> and found what room is FREE in this days (from - to).
      * If have free room in this days and with this params will register and mapping to "index.jsp" page;
      * If don`t have free rooms will mapping to "freeRoomsByDays.jsp" page for look what free rooms in your dates.
-     * @param surname request param for checks registered user.
+     *
+     * @param surname  request param for checks registered user.
      * @param password request param for checks registered user.
      * @param category request param for found rooms by choose category.
-     * @param from request param for mark start booking room date.
-     * @param to request param for mark end booking room date.
+     * @param from     request param for mark start booking room date.
+     * @param to       request param for mark end booking room date.
      * @return String for mapping to *.jsp page.
      */
     @RequestMapping(value = "/reservation", method = RequestMethod.POST)

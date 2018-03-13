@@ -6,9 +6,7 @@ import ua.spring.bookingroom.domain.Reserve;
 import ua.spring.bookingroom.repository.ReserveRepository;
 import ua.spring.bookingroom.service.ReserveService;
 
-import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ReserveServiceImpl implements ReserveService {
@@ -25,11 +23,4 @@ public class ReserveServiceImpl implements ReserveService {
     public List<Reserve> getAll() {
         return reserveRepository.findAll();
     }
-
-//    public void get(LocalDate date) {
-//        reserveRepository.findAll().forEach(reserve -> {
-//            reserve.getDate().equals(date);
-//        });
-//    }
-
 }

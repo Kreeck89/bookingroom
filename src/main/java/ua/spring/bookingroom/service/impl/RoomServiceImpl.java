@@ -6,7 +6,6 @@ import ua.spring.bookingroom.domain.Room;
 import ua.spring.bookingroom.repository.RoomRepository;
 import ua.spring.bookingroom.service.RoomService;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Service
